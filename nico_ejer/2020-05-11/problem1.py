@@ -1,17 +1,31 @@
+# g en alguna parte tiene un yield
+#key: function(x) -> y
+#ej: key: (lambda x: -x)
 
-def bloques(g, key):
-    b = [] # el bloque
-    for x in g: 
-        if len(b) == 0 or key(b[-1]) <= key(x):
-            b.append(x)
+#key(g_1)<=key(g_2) ? 
+#key: (lambda x: x)
+def bloques(g,key):
+    bloque = []
+    for elemento in g: 
+        #bloque[0] -> bloque[-1] = bloque[len(bloque) - 1]
+        #me va a generar un bloque hasta que se rompa la condición
+        if len(bloque) == 0 or key(bloque[-1])<=key(elemento):
+            bloque.append(elemento)
         else:
-            yield b
-            b = [x]
-    if len(b)>0:
-        yield b
+            yield bloque
+            bloque = [elemento] # [4]
+    #si existe un bloque restante === len(bloque)>0
+    if len(bloque)>0:
+        yield bloque
 
 g = [1,5,6,4,8,9,2,3,7]
-
-it = bloques(g,lambda x: x)
-
-print(list(it))
+key = (lambda x: x)
+print( list( bloques( g,key) ) )
+#actual bloque: [1,5,6]
+#6 <= 4
+#genero [1,5,6]
+#empiezo con nuevo bloque: [4]
+#...
+#[2,3] -> 3 <= 7
+#nuevo bloque: [2,3,7]
+#
