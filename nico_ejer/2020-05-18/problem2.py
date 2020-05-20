@@ -41,8 +41,7 @@
 # por default las filas.
 def matrixMSC(M):
     suma_max = 0 
-    x_a,x_b = 0,0
-    y_a,y_b = 0,0
+    x_a,y_a,x_b,y_b = 0,0,0,0
     if len(M) == 0:
         return 0,0
     else:
@@ -64,10 +63,7 @@ def arrayMSC(A):
     if len(A) == 0:
         return 0,0
     else:
-        i = 0
-        j = i
-        s = 0
-        s_max = 0
+        i,j,s,s_max = 0,0,0,0
         for x in range(len(A)):
             s += A[x]
             if s<0:
