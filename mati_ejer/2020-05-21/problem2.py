@@ -14,7 +14,8 @@ matriz2 = [
     [0,0,0,0,0,1],
     [0,0,0,0,0,0]]
 
-def recorrer(M, y, x):
+def recorrer(M):
+    y,x = 0,0
     recorrido = []
     ultimos = [[y,x]]
     height = len(M)
@@ -36,7 +37,7 @@ def recorrer(M, y, x):
             yield 0,-1
             break
 
-for par in recorrer(matriz1, 0, 0):
+for par in recorrer(matriz1):
     y,x = par
     if (y==-1):
         print("no se llega a el final!")
@@ -46,7 +47,7 @@ for par in recorrer(matriz1, 0, 0):
         break
     print("(%d,%d)"% (y, x))
 
-for par in recorrer(matriz2, 0, 0):
+for par in recorrer(matriz2):
     y,x = par
     if (y==-1):
         print("no se llega a el final!")
