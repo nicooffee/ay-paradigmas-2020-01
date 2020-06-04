@@ -42,4 +42,3 @@ generador_3 = generador_infinito_ef()
 
 for x in generador_3:
     print(x)
-    time.sleep(1)
