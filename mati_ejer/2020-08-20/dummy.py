@@ -23,7 +23,7 @@ class IntervalSet:
         # Aca estaria el calculo de free
         return A
 
-    def max_set(self):
+    def max_subset(self):
         A = IntervalSet()
         # Aca estaria el calculo de max_set
         return A
@@ -36,20 +36,7 @@ class WeightedIntervalSet:
     def __init__(self):
         pass
 
-    def add(self, weightedInterval):
-        pass
-
-    def cover(self, weightedInterval):
-        A = WeightedIntervalSet()
-        # Aca estaria el calculo de cover
-        return A
-
-    def free(self, weightedInterval):
-        A = WeightedIntervalSet()
-        # Aca estaria el calculo de free
-        return A
-
-    def max_set(self):
+    def max_subset(self):
         A = WeightedIntervalSet()
         # Aca estaria el calculo de max_set
         return A
