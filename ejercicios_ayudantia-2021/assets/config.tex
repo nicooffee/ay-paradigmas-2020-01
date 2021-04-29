@@ -1,0 +1,26 @@
+\renewcommand*\thesection{\arabic{section}}
+\newcommand \tab{\hspace*{25 pt}}
+\newcommand \minitab{\hspace*{15 pt}}
+\addto\captionsenglish{
+  \renewcommand{\contentsname}{Indice}
+}
+\renewcommand{\listfigurename}{\'Indice de figuras}
+\renewcommand{\listtablename}{\'Indice de tablas}
+\renewcommand*\thesubsubsection{{\large\bfseries Pregunta \arabic{subsubsection}}}
+
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\normalsize}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\renewcommand{\labelitemi}{{\Large$\centerdot$}}
+\renewcommand\labelitemii{$\square$}
+
+\captionsetup[table]{name=Tabla}
+\captionsetup[figure]{name=Figura}
+
+\parindent=0cm
+\parskip=0.15cm
+\newcommand{\PROBLEM}[1]{{\bf Pregunta #1}}

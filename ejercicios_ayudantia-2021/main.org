@@ -1,0 +1,55 @@
+:OPTIONS:
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [titlepage,11pt]
+#+LATEX_HEADER: \input{assets/lib.tex}
+#+LATEX_HEADER: \renewcommand{\maketitle}{\input{assets/title.tex}}
+#+LATEX_HEADER: \input{assets/config.tex}
+#+LANGUAGE: spanish
+#+OPTIONS: toc:2
+:END:
+#+TITLE: Ejercicios ayudantia 2021
+#+AUTHOR: Matias Hurtado Carrasco
+#+KEYWORDS: Programacion, Paradigma de programacion, Programming, Programming paradigm, Python, Programacion funcional, Functional programming, Scheme, Java, POO, Programacion orientada a objetos, OOP, Object oriented programming
+
+\newpage
+* <2021-04-29 Thu>
+# [[file:2021-04-29/fecha1/ejercicio.py][Ejercicio]]
+** Ejemplos
+1) tupla
+    #+begin_src python :results output
+tup = (1 , 2)
+
+for v in tup:
+print(v)
+#+end_src
+
+2) lista
+     #+begin_src python :results output
+ lis = [0, 2, 4, 6]
+
+ for v in lis:
+     print(v)
+     #+end_src
+
+3) funcion
+     #+begin_src python :results output
+ def funp(value):
+     while value > 0:
+         yield value
+         value -= 1
+     else:
+         return 0
+
+ for v in funp(5):
+     print("funp:", str(v))
+     #+end_src
+
+4) lista de funciones
+     #+begin_src python :results output
+ lisf = [lambda x, y: x**2 + y, lambda x, y: x + y**2]
+
+ for f in lisf:
+     print("f({},{}) = {}".format(2, 3, f(2,3)))
+     #+end_src
+
+** Ejercicios
